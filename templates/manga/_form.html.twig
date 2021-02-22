@@ -1,0 +1,23 @@
+<div class="container-new">
+	{{ form_start(form) }}
+	{{ form_row(form.images) }}
+	{{ form_row(form.title) }}
+	{{ form_row(form.description) }}
+
+	{% if app.request.attributes.get('_route') == 'manga_edit' %}
+		{% for image in manga.images %}
+			<div id="list-img-form">
+				<img src="{{ asset('images/manga/'~ image.name) }}" alt="" width="100%">
+				<a  href="{{ path('manga_image_delete', {id: image.id})}}" data-delete data-token="{{ csrf_token('delete' ~ image.id )}}">
+					<i class="fas fa-trash-alt"></i>
+				</a>
+			</div>
+		{% endfor %}
+	{% endif %}
+
+	<button class="btn-default btn-valid" style="margin-left:0">
+		{{ button_label|default('Valider') }}
+	</button>
+
+	{{ form_end(form) }}
+</div>

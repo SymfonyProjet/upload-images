@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Modification
+{% endblock %}
+
+{% block body %}
+    <h1>Modification</h1>
+
+    {{ include('manga/_form.html.twig', {'button_label': 'Modifier'}) }}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/delete-one-image.js') }}"></script>
+{% endblock %}

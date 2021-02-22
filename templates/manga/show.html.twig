@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Synopsis du manga
+	{{ manga.title }}
+{% endblock %}
+
+{% block body %}
+
+	<div class="container-card-book">
+		<main class="card-book">
+			<h3 class="h3">{{ manga.title }}</h3>
+			<hr class="divider">
+			<article>
+				{% if manga.images|length == null %}
+					<i class="fas fa-images fa-5x"></i>
+				{% else %}
+					<img src="{{ asset('images/manga/' ~ manga.images.values[0].name) }}" alt="Photo du manga {{ manga.title }}">
+				{% endif %}
+				<h3 class="h3">
+					Synopsis du manga
+					{{ manga.title }}
+				</h3>
+				<hr class="divider">
+				<div class="text">
+					<textarea readonly id="description-manga-show">
+						{{ manga.description|raw }}
+					</textarea>
+				</div>
+			</article>
+			<a class="btn-default btn-back" href="{{ path('manga_index') }}">
+				Retour
+			</a>
+		</main>
+	</div>
+	<h3 class="h3 h3-gallery" style="margin-top:100px; margin-bottom:15px">Gallerie d'images</h3>
+	<div class="gallery">
+		{% if manga.images|length == null %}
+			<i class="fas fa-images fa-5x"></i>
+			<h2 style="color:black; font-size:2.5rem">AUCUNE IMAGE DANS LA GALLERIE</h2>
+		{% else %}
+			{% for image in manga.images %}
+				<a href="{{ asset('/images/manga/' ~ image.name) }}">
+					<img src="{{ asset('/images/manga/' ~ image.name) }}" alt="">
+				</a>
+			{% endfor %}
+		{% endif %}
+	</div>
+
+{% endblock %}

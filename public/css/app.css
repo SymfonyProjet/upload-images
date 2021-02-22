@@ -1,0 +1,138 @@
+@import "minireset.css";
+@import "typo.css";
+@import "button.css";
+@import "card-book.css";
+
+body {
+    background-image: url('https://i.ibb.co/Yjnzdfy/gogeta.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body h1,
+h2,
+h3,
+p {
+    color: white;
+}
+
+body a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 15px;
+    padding: 15px;
+}
+
+.h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: black;
+}
+
+.h3-gallery {
+    color: white;
+}
+
+h3::first-letter {
+    text-transform: capitalize;
+}
+
+.divider {
+    width: 13%;
+    border: none;
+    margin: 0 auto;
+    border-top: 3px solid darkred;
+}
+
+#welcome-msg {
+    width: 50%;
+    margin: 0 auto;
+    padding: 34px 0px;
+}
+
+.flash {
+    border: 1px solid black;
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.flash-update {
+    background: goldenrod;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.table-manga {
+    width: 95%;
+    border-radius: 5px;
+    background: #ffffffe3;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+    margin-bottom: 150px;
+}
+
+.table-manga img {
+    width: 80px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 4px #0000009c;
+}
+
+.table-manga thead {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.315);
+    width: 100%;
+}
+
+.table-manga td {
+    padding-top: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkred;
+    font-size: 1.5rem;
+}
+
+.container-new {
+    margin: 0 auto;
+    width: 65%;
+}
+
+#list-img-form {
+    width: 24%;
+    display: inline-grid;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: white;
+}
+
+.count-picture {
+    position: relative;
+}
+
+.count-picture i {
+    font-weight: 600;
+    font-size: 0.65rem;
+    background: black;
+    border-radius: 3px;
+    color: #ffeb3b;
+    position: absolute;
+    display: flex;
+    left: -8px;
+    padding: 2px;
+}

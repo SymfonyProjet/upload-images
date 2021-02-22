@@ -1,0 +1,76 @@
+.btn-default {
+    border: 0.5px solid #8e8e8e;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn-valid {
+    background: #1c6b1f;
+    color: white;
+    margin-left: 15px;
+}
+
+.btn-valid:hover {
+    cursor: pointer;
+}
+
+.btn-update {
+    background: goldenrod;
+    color: black;
+}
+
+.btn-delete {
+    background: darkred;
+    color: white;
+}
+
+.btn-back {
+    background: lightslategrey;
+    color: black;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+}
+
+.btn-show {
+    background: #09388e;
+    margin-right: 10px;
+    color: white;
+}
+
+input[type="file"] {
+    border: 1px solid transparent;
+    background: white;
+    padding: 7px 0px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0px;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    border: none;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 125px;
+    resize: none;
+    margin-bottom: 18px;
+}
+
+.fa-trash-alt {
+    font-size: 0.9rem;
+    color: darkred;
+}
+
+#d-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
